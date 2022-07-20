@@ -3,23 +3,85 @@ body{
   
    
     background-size: cover ;
-    
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+   
+    align-items: center;
+    justify-content:center;
     min-height: 100vh ;
+}
+
+
+
+.player{
+    background-color: #002d66;
+    height: 100%;
+    line-height: 48px;
+}
+span{
+    
+    color: aliceblue;
+    
+   
+}
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 98%;
+    
+    align-items: center;
+    justify-content:center;
+
+  
+
 
 }
 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 0 10px;
+   
+    margin: 10px 0 10px 5px;
+    background-size: cover ;
+    background-position: center;
+    height:48px;
+    width: 97%;
+    max-width: 620px;
+    margin-bottom: 5px;
+ 
+    background-image: url('../img/topo.jpeg');
+}
+
 .grid{
+   
+
     display: grid;
-    width: 100%;
-    max-width:700px;
     
-   grid-template-columns:  repeat(6, 1fr);
-   gap: 10px;
+    min-width: 40vh;
+  
+    width: 90%;
+    max-width: 130vh;
+    
+   
+   gap: 0px 5px;
 
 
-   margin: 0 auto;
+  
 
     
+}
+.celular{
+    grid-template-columns:repeat(3, 3fr);
+    padding-top: 10px;
+}
+.pc{
+    gap: 5px;
+    grid-template-columns:repeat(8, 3fr);
 }
 .cards{
     aspect-ratio: 3/5.2;

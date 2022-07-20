@@ -162,19 +162,34 @@ function virar ({target}){
 
 }
 
+let quantCard = 0
 
+
+function adapitarTela(){
+
+    
+    
+
+    if(detectar_mobile()){
+        grid.classList.add('celular')
+        quantCard = 6;
+    }else{
+    grid.classList.add('pc')
+     quantCard = 12;
+    }
+}
 
 
 const carregarGame = () =>{
 
-    
+    adapitarTela()
 
     const sheikTimes = times
 
     sheikTimes.sort(() => Math.random() - 0.5)
 
 
-    const sheikTimes2 = sheikTimes.slice(0,9)
+    const sheikTimes2 = sheikTimes.slice(0,quantCard)
 
 
 
@@ -197,3 +212,24 @@ const carregarGame = () =>{
 }
 
 carregarGame()
+
+
+
+
+
+function detectar_mobile() { 
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ){
+       return true;
+     }
+    else {
+       return false;
+     }
+   }
+   console.log(grid)
