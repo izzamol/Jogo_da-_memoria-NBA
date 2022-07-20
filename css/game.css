@@ -1,0 +1,75 @@
+body{
+    background-image: url("../img/wp11243520-nba-75th-anniversary-team-wallpapers.png" ) ;
+  
+   
+    background-size: cover ;
+    
+    min-height: 100vh ;
+
+}
+
+.grid{
+    display: grid;
+    width: 100%;
+    max-width:700px;
+    
+   grid-template-columns:  repeat(6, 1fr);
+   gap: 10px;
+
+
+   margin: 0 auto;
+
+    
+}
+.cards{
+    aspect-ratio: 3/5.2;
+    
+    border-radius: 5px;
+    position: relative;
+    
+    
+    transition:all 400ms;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+}
+.virar{
+    transform: rotateY(180deg);
+
+}
+
+
+
+
+
+
+
+
+
+.face{
+    cursor: pointer;
+    border-radius: 5px;
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+.front{
+  
+    background-size: cover ;
+    background-position: center;
+    transform: rotateY(180deg)
+}
+.back{
+    background-image: url(../img/NBA\ 75\ Anos\ 💎.jpeg);
+    background-size: cover ;
+    background-position: center;
+    backface-visibility: hidden;
+}
+.achoooo{
+
+    transition: 400ms;
+    filter: saturate(0);
+    opacity: 0.8;
+    cursor:not-allowed;
+}
