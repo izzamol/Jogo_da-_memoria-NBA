@@ -1,7 +1,9 @@
 const grid = document.querySelector('.grid')
 
 
+const timer= document.querySelector('.timer')
 
+const playername = document.querySelector('.player')
 
 
 const times = [
@@ -91,13 +93,23 @@ function verificavitoria(){
     if(destsabilitadas.length == (quantCard*2-2)){
 
 
-
-
+       
         setTimeout(() => {
         
-                    alert("parabens! vc ganhou")
+                    alert("parabens, "+ playername.innerHTML +" ! vc ganhou. Seu tempo foi: " + timer.innerHTML  )
 
+                    
                },900)
+
+               
+        
+                
+
+                 location.reload()
+          
+               
+             
+        
 
     }
 }
@@ -184,6 +196,7 @@ function adapitarTela(){
 
 const carregarGame = () =>{
 
+  iniciaTimer()
     adapitarTela()
 
     const sheikTimes = times
@@ -213,7 +226,64 @@ const carregarGame = () =>{
     
 }
 
-carregarGame()
+
+
+
+
+
+function ZeroAesquerda(n){
+    let h
+    if( n<10){
+        h= '0'+ n
+    }else
+    { h=n}
+    return h
+}
+let sec =0
+let min = 0
+
+function tei(){
+
+
+sec++
+
+
+    if(sec === 60){
+        sec = 0
+        min++
+    }
+   
+
+    
+
+  timer.innerHTML = ZeroAesquerda(min) + ':' + ZeroAesquerda(sec)
+}
+
+const iniciaTimer = () =>{
+    
+    
+ setInterval(tei, 1000)
+    
+
+
+    
+
+}
+
+console.log(this)
+
+window.onload = () =>{
+
+   
+
+
+
+    playername.innerHTML = localStorage.getItem('Player')
+
+    carregarGame()
+}
+
+
 
 
 
@@ -234,4 +304,4 @@ function detectar_mobile() {
        return false;
      }
    }
-   console.log(grid)
+ 
