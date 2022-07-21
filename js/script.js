@@ -88,7 +88,7 @@ function verificavitoria(){
     const destsabilitadas = document.querySelectorAll('.achoooo')
 
     console.log(destsabilitadas.length )
-    if(destsabilitadas.length == 16){
+    if(destsabilitadas.length == (quantCard*2-2)){
 
 
 
@@ -163,7 +163,7 @@ function virar ({target}){
 }
 
 let quantCard = 0
-
+let quantCarde = 0
 
 function adapitarTela(){
 
@@ -173,9 +173,11 @@ function adapitarTela(){
     if(detectar_mobile()){
         grid.classList.add('celular')
         quantCard = 6;
+        quantCarde = 12
     }else{
     grid.classList.add('pc')
      quantCard = 12;
+     quantCarde = 22
     }
 }
 
@@ -215,7 +217,7 @@ carregarGame()
 
 
 
-
+adapitarTela()
 
 function detectar_mobile() { 
     if( navigator.userAgent.match(/Android/i)

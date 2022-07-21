@@ -76,10 +76,31 @@ header{
     
 }
 .celular{
+
+    display: grid;
+    
+    min-width: 30vh;
+  
+    width: 85%;
+    max-width: 130vh;
+    
+   
+   gap: 1px 5px;
+
     grid-template-columns:repeat(3, 3fr);
-    padding-top: 10px;
+    padding-top: 0px;
 }
 .pc{
+
+    display: grid;
+    
+    min-width: 40vh;
+  
+    width: 96%;
+    max-width: 130vh;
+    
+   
+   gap: 0px 5px;
     gap: 5px;
     grid-template-columns:repeat(8, 3fr);
 }
