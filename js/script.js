@@ -41,8 +41,6 @@ const times = [
 
 ]
 
-
-
 function criarElemento(tag, criaClasse){
     const elemento = document.createElement(tag)
     elemento.className = criaClasse
@@ -50,12 +48,7 @@ function criarElemento(tag, criaClasse){
     return elemento
 }
 
-
 function criarCard(time){
-
-
-   
-
     const card = criarElemento('div', 'cards')
     const front = criarElemento('div', 'face front')
     const back = criarElemento('div', 'face back')
